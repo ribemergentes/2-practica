@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción Curso</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+        <h1 class="text-center mb-8">Inscripción al Curso</h1>
+        <form method="POST">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="apellidos" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+            </div>
+            <div class="mb-3">
+                <label for="curso" class="form-label">Curso</label>
+                <select id="curso" name="curso" class="form-select" required>
+                    <option>Python Básico</option>
+                    <option>JavaScript Avanzado</option>
+                    <option>Diseño Web</option>
+                    <option>Base de Datos</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Inscribirse</button>
+        </form>
+    </div>
+    <br>
+    <a href="{{ url_for('index') }}" class="btn btn-link">Volver al menú principal</a>
+</div>
+</div>
+    <!-- Bootstrap JS (opcional para interactividad) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
